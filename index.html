@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Selena Lakehouse — платформа данных нового поколения">
+  <title>Selena Lakehouse</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header wrap">
+    <a class="logo" href="#top" aria-label="Selena"><img src="assets/logos/I54-6460-62-3447.svg" alt="Selena"></a>
+    <nav>
+      <a href="#docs">Документация</a>
+      <a href="#architecture">Моделирование</a>
+      <a href="#blog">Блог</a>
+      <a href="#company">О компании</a>
+      <a href="#community">Комьюнити</a>
+      <span class="starrocks"><img src="assets/logos/I54-6460-62-3414.svg" alt="StarRocks"></span>
+    </nav>
+    <a class="btn btn-glass header-cta" href="#demo">Запросить Демо →</a>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-card hero-card-left" aria-hidden="true">
+        <div class="dash-head"><span><i></i>selena.analytics</span><span><b>LIVE</b> 0.21c ✓</span></div>
+        <div class="dash-stats"><strong>◎ &nbsp;2 513 736</strong><span><em>Selena</em><em>Analytics</em></span></div>
+        <div class="stream"><b>СТРИМ СОБЫТИЙ</b><code>&gt; mv/refresh · <i>orders_agg</i> · 0.02c<br>&gt; event#queued · batch <i>178</i> · 0.05c<br>&gt; txn#2R104 · <i>PR A73</i> · <i>ЛК</i> · 0.08c</code></div>
+      </div>
+      <div class="hero-content">
+        <span class="registry"><i class="registry-dot"></i>Реестр российского ПО · № 27176</span>
+        <h1><mark>Selena</mark> Lakehouse</h1>
+        <h2>Платформа данных нового поколения 🤘</h2>
+        <p>Хранение, аналитика и искусственный интеллект в одной системе —<br> без копирования данных между корпоративными хранилищами, озёрами данных<br> и средами машинного обучения. Пакетная и потоковая обработка и аналитика<br> в единой среде. В основе — открытый стандарт Apache Iceberg и корпоративное<br> ядро StarRocks Enterprise с полным набором промышленных возможностей</p>
+        <div class="actions">
+          <a class="btn btn-white" href="#demo">Запросить демо</a>
+          <a class="btn btn-glass" href="#docs">Документация</a>
+        </div>
+      </div>
+      <div class="hero-card hero-card-right" aria-hidden="true">
+        <div class="dash-head"><span><i></i>selena.analytics</span><span><b>LIVE</b> 0.47c ✓</span></div>
+        <div class="dash-stats"><strong>◎ &nbsp;2 513 736</strong><span><em>Selena</em><em>Analytics</em></span></div>
+        <div class="dash-chart"><span>События:<b>+12.3%</b></span><svg viewBox="0 0 160 50" aria-hidden="true"><path d="M2 43 C24 16 39 40 57 20 S91 23 104 12 S131 12 157 3"/><circle cx="157" cy="3" r="3"/></svg></div>
+        <code>&gt; mv/refresh · <i>orders_agg</i> · 0.02c<br>&gt; event#queued · batch <i>178</i> · 0.05c<br>&gt; txn#2R104 · <i>PR A73</i> · <i>ЛК</i> · 0.08c</code>
+      </div>
+      <div class="ticker">
+        <span>Cluster Manager: Собственная разработка</span>
+        <span>ETL / загрузка данных: Пайплайны и потоки</span>
+        <span>OLAP/SQL-движок: StarRocks</span>
+        <span>Каталог метаданных: Lakekeeper · REST catalog</span>
+        <span>Мониторинг: Grafana · Prometheus</span>
+      </div>
+    </section>
+
+    <section class="section tasks">
+      <div class="wrap">
+        <p class="eyebrow">// Прикладные задачи</p>
+        <h2>Какие задачи вы будете решать на <mark class="mark-white">Selena?</mark></h2>
+        <div class="tasks-layout">
+          <div class="pills" role="tablist" aria-label="Отрасли">
+            <button class="active" type="button" role="tab" aria-selected="true" data-task-tab="bank"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M1.25 5h17.5v10H1.25zM7.5 10a2.5 2.5 0 1 0 5 0 2.5 2.5 0 0 0-5 0ZM1.25 9.4A5 5 0 0 0 6.25 5M1.25 10.6a5 5 0 0 1 5 4.4M18.75 9.4a5 5 0 0 1-5-4.4M18.75 10.6a5 5 0 0 0-5 4.4"/></svg>01 · Банки и финансы</button>
+            <button type="button" role="tab" aria-selected="false" data-task-tab="retail"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14v10H3zM5 6V4h10v2M7 10h6M7 13h4"/></svg>02 · Ритейл и e-commerce</button>
+            <button type="button" role="tab" aria-selected="false" data-task-tab="telecom"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M6.2 2.8 8.5 7 6.8 8.7c1 2 2.5 3.5 4.5 4.5l1.7-1.7 4.2 2.3-.8 3c-.2.7-.8 1.2-1.6 1.2C7.8 18 2 12.2 2 5.2c0-.8.5-1.4 1.2-1.6z"/></svg>03 · Телеком</button>
+            <button type="button" role="tab" aria-selected="false" data-task-tab="industry"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2.2c2.3 2 3.6 4 3.6 6.1 0 2.7-1.6 4.4-3.6 4.4s-3.6-1.7-3.6-4.4C6.4 6.2 7.7 4.2 10 2.2ZM6.5 12.2l-2 3.8 3.8-.9M13.5 12.2l2 3.8-3.8-.9M8.5 17h3"/></svg>04 · Промышленность</button>
+            <button type="button" role="tab" aria-selected="false" data-task-tab="government"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2.5 6.5h15v10h-15zM6.5 6.5v-3h7v3M2.5 10h15M8 10v1.5h4V10"/></svg>05 · Госсектор и холдинги</button>
+          </div>
+          <div class="card-grid two" id="task-cards" role="tabpanel" aria-live="polite">
+            <article class="card">
+              <h3>▣ &nbsp;Антифрод-аналитика</h3>
+              <p>Sub-second аналитика подозрительных операций и ML feature store. Корреляция сигналов и расследование кейсов в едином контуре — как у DiDi и Airbnb на StarRocks</p>
+              <small>Sub-second · ML Feature Store</small>
+            </article>
+            <article class="card">
+              <h3>▤ &nbsp;Регламентные витрины</h3>
+              <p>Единый источник правды для регуляторной и управленческой отчётности. ACID-гарантии Iceberg, история версий и полный аудит изменений</p>
+              <small>ACID · Версионность · Аудит</small>
+            </article>
+            <article class="card">
+              <h3>♙ &nbsp;Клиент 360</h3>
+              <p>Единая картина клиента по всем продуктам, каналам и источникам. Основа для персональных предложений и NBA</p>
+              <small>Персонализация · NBA</small>
+            </article>
+            <article class="card">
+              <h3>⌁ &nbsp;Риск-аналитика</h3>
+              <p>Единое аналитическое хранилище для риск-моделей и ML. Данные, расчёты и отчёты — в одном контуре, без выгрузок во внешние системы</p>
+              <small>ML · Единый контур</small>
+            </article>
+          </div>
+        </div>
+      </div>
+      <script>
+        (() => {
+          const taskContent = {
+            bank: [
+              ["▣", "Антифрод-аналитика", "Sub-second аналитика подозрительных операций и ML feature store. Корреляция сигналов и расследование кейсов в едином контуре — как у DiDi и Airbnb на StarRocks", "Sub-second · ML Feature Store"],
+              ["▤", "Регламентные витрины", "Единый источник правды для регуляторной и управленческой отчётности. ACID-гарантии Iceberg, история версий и полный аудит изменений", "ACID · Версионность · Аудит"],
+              ["♙", "Клиент 360", "Единая картина клиента по всем продуктам, каналам и источникам. Основа для персональных предложений и NBA", "Персонализация · NBA"],
+              ["⌁", "Риск-аналитика", "Единое аналитическое хранилище для риск-моделей и ML. Данные, расчёты и отчёты — в одном контуре, без выгрузок во внешние системы", "ML · Единый контур"]
+            ],
+            retail: [
+              ["⌁", "Омниканальная аналитика", "Веб, мобильное приложение и офлайн-магазины — в одном контуре. Путь клиента виден целиком, без склейки витрин", "Веб + Моб + Офлайн"],
+              ["⌁", "Прогноз спроса", "ML-прогнозы продаж по SKU и магазинам. Данные для управления запасами и снижения over/under-stock", "ML · УУправление запасами"],
+              ["◯", "AI-рекомендации и поиск", "Персональные рекомендации на основе поведения. Семантический поиск и AI-ассистент в приложении — LLM + RAG", "LLM · RAG · Vector search"],
+              ["◁", "Маркетинговая атрибуция", "ROI каналов, когортный анализ, LTV-моделирование. Полная воронка — от первого клика до повторной покупки", "ROI каналов · LTV"]
+            ],
+            telecom: [
+              ["♙", "Churn prediction", "ML-скоринг оттока на уровне абонента. Признаки на CDR и платёжной активности, сегменты для кампаний удержания", "ML · Удержание абонентов"],
+              ["▥", "Аналитика сети", "Корреляция сетевых событий по регионам, типам оборудования и временным окнам. Аналитическая подложка для NMS и оперативных команд", "Корреляция · NMS"],
+              ["◇", "Антифрод в сети", "Детект и расследование подозрительных паттернов на CDR: SIM-swap, подмены номера, roaming-fraud. ML-аналитика и разметка кейсов", "SIM-swap · Roaming · CDR"],
+              ["♙", "Аналитика абонентов", "ROI каналов, когортный анализ, LTV-моделирование. Полная воронка — от первого клика до повторной покупки", "CDR · VAS · Cегментация"]
+            ],
+            industry: [
+              ["⚙", "Предиктивное обслуживание", "IoT-телеметрия оборудования → ML-модели аномалий → упреждающий ремонт. Меньше простоев, ниже стоимость владения", "IoT · ML · Аnomaly detection"],
+              ["▥", "Производственная аналитика", "Единая картина производства в данных: OEE, загрузка оборудования, анализ простоев. Основа для what-if и оптимизации режимов", "OEE · Загрузка · Простои"],
+              ["✓", "Контроль качества", "Прослеживаемость партий от сырья до готовой продукции. Анализ брака, корреляция с параметрами техпроцесса", "Прослеживаемость · Анализ брака"],
+              ["ϟ", "Энергоменеджмент", "Балансировка потребления, поиск потерь, оптимизация режимов. Аналитика счётчиков и датчиков в едином хранилище", "Оптимизация потребления"]
+            ],
+            government: [
+              ["▱", "Консолидация данных", "Объединение данных ведомств, дочерних компаний и IT-систем в едином аналитическом контуре — без миграций источников", "Ведомства · Дочки · ИС"],
+              ["□", "Управленческая отчётность", "Единая версия правды для топ-менеджмента. Регулярные отчёты, ad-hoc запросы и dashboard — в одной системе", "Единая версия · Dashboards"],
+              ["♨", "Импортозамещение DWH", "Миграция с Oracle, Teradata, Greenplum, Hive. Совместимость со стандартным SQL, реестр РФ № 27176, ниже TCO", "Oracle · Teradata · Greenplum · Hive"],
+              ["▦", "Аналитический контур", "Единая платформа для всех данных организации. Основа для ИИ-инициатив, управленческих решений и цифровизации", "Решения на данных"]
+            ]
+          };
+
+          const tabs = [...document.querySelectorAll("[data-task-tab]")];
+          const panel = document.querySelector("#task-cards");
+          const render = (key) => {
+            panel.replaceChildren(...taskContent[key].map(([icon, title, text, tag]) => {
+              const card = document.createElement("article");
+              card.className = "card";
+              card.innerHTML = `<h3><span class="task-card-icon" aria-hidden="true">${icon}</span>${title}</h3><p>${text}</p><small>${tag}</small>`;
+              return card;
+            }));
+            panel.classList.remove("content-enter");
+            void panel.offsetWidth;
+            panel.classList.add("content-enter");
+          };
+
+          tabs.forEach((tab) => tab.addEventListener("click", () => {
+            tabs.forEach((item) => {
+              const selected = item === tab;
+              item.classList.toggle("active", selected);
+              item.setAttribute("aria-selected", String(selected));
+            });
+            render(tab.dataset.taskTab);
+          }));
+        })();
+      </script>
+    </section>
+
+    <section class="section teams">
+      <div class="wrap centered">
+        <p class="eyebrow">// 01 · Применение</p>
+        <h2>Для кого создана <mark class="mark-dark">Selena</mark></h2>
+        <p class="lead">Единая платформа для всех команд, работающих с данными в вашей организации 🧑‍💻</p>
+        <div class="card-grid three">
+          <article class="card"><h3><i>01</i> Аналитические команды</h3><p>Данные доступны за секунды, а не на следующий день. Интерактивные ad-hoc запросы к петабайтным датасетам без ограничений по скорости</p><div class="tags"><span>Ad-hoc</span><span>SQLReal-time</span><span>OLAP</span><span>Self-service</span></div></article>
+          <article class="card"><h3><i>02</i> BI и отчётность</h3><p>Единая версия правды для BI, управленческой и регулярной отчётности. Бизнес-пользователи строят дашборды самостоятельно — без запросов в ИТ</p><div class="tags"><span>Superset</span><span>Metabase</span><span>Tableau</span><span>Power BI</span></div></article>
+          <article class="card"><h3><i>03</i> ML и AI команды</h3><p>Данные не нужно копировать в отдельные системы — аналитика и ИИ работают в едином контуре. Встроенная поддержка GigaChat, DeepSeek, Qwen</p><div class="tags"><span>GigaChat</span><span>DeepSeek</span><span>Qwen</span><span>MLflow</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tools">
+      <div class="wrap">
+        <p class="eyebrow">// Инструменты</p>
+        <h2>Всё необходимое — в одной <mark class="mark-lime">платформе</mark></h2>
+        <p class="lead">Собственные инструменты разработки поверх open-source ядра, без дополнительных лицензий</p>
+        <div class="rail tools-carousel" id="tools-carousel">
+          <article class="card"><h3><svg class="card-title-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2.5v4M4.375 9.375v-2.5h11.25v2.5M2.5 9.375h3.75v3.75H2.5zM8.125 9.375h3.75v3.75h-3.75zM13.75 9.375h3.75v3.75h-3.75z"/></svg>Cluster Manager</h3><p>Единое окно управления кластером: автомасштабирование, мониторинг, балансировка нагрузки.</p><ul><li>Управление узлами, ресурсами и квотами</li><li>Отказоустойчивость и репликация</li><li>Grafana + Prometheus из коробки</li></ul></article>
+          <article class="card"><h3><svg class="card-title-icon" viewBox="0 0 20 20" aria-hidden="true"><ellipse cx="10" cy="5" rx="6.875" ry="3.125"/><path d="M3.125 5v5c0 1.725 3.078 3.125 6.875 3.125s6.875-1.4 6.875-3.125V5M3.125 10v5c0 1.725 3.078 3.125 6.875 3.125s6.875-1.4 6.875-3.125v-5"/></svg>Data Loading</h3><p>Визуальный конструктор ETL-пайплайнов с поддержкой 200+ источников и потоковой загрузки.</p><ul><li>Kafka, Flink, Spark интеграция</li><li>Drag-and-drop визуальный дизайнер</li><li>Мониторинг пайплайнов в реальном времени</li></ul></article>
+          <article class="card"><h3><svg class="card-title-icon" viewBox="0 0 20 20" aria-hidden="true"><rect x="4.375" y="2.5" width="11.25" height="15" rx="1.5"/><path d="M7.5 5h5M7.5 12.5h.01M11.25 12.5h1.25"/></svg>Web IDE</h3><p>Встроенная среда разработки для SQL: автодополнение, версионирование, совместная работа команды.</p><ul><li>SQL-редактор с историей и версионированием</li><li>Встроенные дашборды и диаграммы</li><li>Интеграция с Data Catalog</li></ul></article>
+          <article class="card"><h3><svg class="card-title-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M17.5 9.688a7.188 7.188 0 0 1-7.188 7.187H4.375a1.25 1.25 0 0 1-1.25-1.25V9.688a7.188 7.188 0 1 1 14.375 0Z"/><path d="M6.25 9.688h.01M10 9.688h.01M13.75 9.688h.01"/></svg>Генеративный ИИ</h3><p>Нативная интеграция LLM — работа с данными на естественном языке прямо из платформы.</p><ul><li>Text-to-SQL и SQL-to-Text</li><li>Семантический поиск по данным</li><li>Vector Store и AI-агент</li></ul></article>
+          <article class="card"><h3><svg class="card-title-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M11.25 1.875 3.75 11.25h6.25l-1.25 6.875 7.5-9.375H10l1.25-6.875Z"/></svg>Производительность</h3><p>SIMD-векторизация и многоуровневое кэширование для субсекундного отклика на петабайтах данных.</p><ul><li>Cost-based optimizer (CBO)</li><li>Материализованные представления</li><li>Кэш: Memory → SSD → S3</li></ul></article>
+          <article class="card"><h3><svg class="card-title-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2.5 16.875 5v5c0 4.375-2.94 6.787-6.875 7.5-3.935-.713-6.875-3.125-6.875-7.5V5L10 2.5Z"/></svg>Безопасность</h3><p>Корпоративный уровень ИБ: RBAC, аудит, шифрование, маскировка данных, мультитенантность.</p><ul><li>Row- и column-level security</li><li>Динамическая маскировка данных</li><li>Аудит всех операций</li></ul></article>
+        </div>
+        <div class="carousel-arrows" aria-label="Управление каруселью">
+          <button type="button" data-carousel-prev aria-label="Предыдущие карточки">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16.875 10H3.125M8.75 4.375 3.125 10l5.625 5.625"/></svg>
+          </button>
+          <button type="button" data-carousel-next aria-label="Следующие карточки">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3.125 10h13.75M11.25 4.375 16.875 10l-5.625 5.625"/></svg>
+          </button>
+        </div>
+      </div>
+      <script>
+        (() => {
+          const carousel = document.querySelector("#tools-carousel");
+          const prev = document.querySelector("[data-carousel-prev]");
+          const next = document.querySelector("[data-carousel-next]");
+          const step = () => carousel.querySelector(".card").getBoundingClientRect().width + 16;
+          const update = () => {
+            prev.disabled = carousel.scrollLeft <= 1;
+            next.disabled = carousel.scrollLeft >= carousel.scrollWidth - carousel.clientWidth - 1;
+          };
+
+          prev.addEventListener("click", () => carousel.scrollBy({ left: -step(), behavior: "smooth" }));
+          next.addEventListener("click", () => carousel.scrollBy({ left: step(), behavior: "smooth" }));
+          carousel.addEventListener("scroll", update, { passive: true });
+          window.addEventListener("resize", update);
+          update();
+        })();
+      </script>
+    </section>
+
+    <section class="section architecture" id="architecture">
+      <div class="wrap centered">
+        <p class="eyebrow">// 02 · Архитектура</p>
+        <h2><mark class="mark-dark">Selena</mark> создана для больших данных</h2>
+        <p class="lead">Открытые стандарты, высокая производительность и готовность к AI — в одной платформе 🎯</p>
+        <div class="arch-diagram">
+          <section class="arch-layer"><b>01 · Управление и инструменты</b><div class="arch-row five">
+            <article><strong>▤ Lakekeeper</strong><span>REST Catalog (Apache Iceberg)</span></article>
+            <article><strong>▤ DolphinScheduler</strong><span>Оркестрация<br>и воркфлоу</span></article>
+            <article><strong>&lt;/&gt; Querybook + AI</strong><span>SQL Редактор<br>и Ассистент</span></article>
+            <article><strong>☷ Управление</strong><span>Кластер-менеджер</span></article>
+            <article><strong>◇ Selena Моделирование</strong><span>Семантический слой<br>метаданных</span></article>
+          </div></section>
+          <section class="arch-layer"><b>02 · StarRocks Enterprise</b><div class="enterprise">
+            <div><h3>⌘ FRONTEND-НОДЫ (JAVA)</h3><div class="arch-row three"><article><strong>FE Leader</strong><span>Оптимизатор<br>Координатор</span></article><article><strong>FE Observer</strong><span>Оптимизатор<br>Координатор</span></article><article><strong>FE Follower</strong><span>Оптимизатор<br>Координатор</span></article></div></div>
+            <div><h3>▣ ВЫЧИСЛИТЕЛЬНЫЕ НОДЫ (C++)</h3><div class="arch-row three"><article><strong>CN-1</strong><span>Вычисление<br>Кэш</span></article><article><strong>CN-2</strong><span>Вычисление<br>Кэш</span></article><article><strong>CN-3</strong><span>Вычисление<br>Кэш</span></article></div></div>
+          </div></section>
+          <section class="arch-layer"><b>03 · Хранение данных · S3 (HOSTS)</b><div class="arch-row three storage"><article><strong>Node-1</strong><span>Секция распределенного хранения</span></article><article><strong>Node-2</strong><span>Секция распределенного хранения</span></article><article><strong>Node-3</strong><span>Секция распределенного хранения</span></article></div></section>
+          <div class="arch-bottom">
+            <section class="arch-layer"><b>04 · Безопасность</b><div class="arch-row three"><article><strong>♙ SSO Keycloak</strong><span>Identity Provider</span></article><article><strong>▣ Hashicorp Vault</strong><span>Секреты</span></article><article><strong>▣ Apache Ranger</strong><span>Авторизация</span></article></div></section>
+            <section class="arch-layer"><b>05 · Инфраструктура</b><div class="arch-row two"><article><strong>⌁ Grafana</strong><span>Метрики и Дашборды</span></article><article><strong>▤ Prometheus</strong><span>Мониторинг</span></article></div></section>
+          </div>
+          <div class="arch-footer"><strong>Kubernetes Cluster</strong><span>Helm charts · StatefulSet · DaemonSet · Deployment</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section capabilities">
+      <div class="wrap">
+        <p class="eyebrow">// SELENA DATA LAKEHOUSE</p>
+        <h2>Компонентная архитектура <mark class="mark-lime">Selena</mark></h2>
+        <div class="feature-intro" id="component-panel">
+          <div class="tabs" role="tablist" aria-label="Компоненты платформы">
+            <button class="active" type="button" role="tab" aria-selected="true" aria-controls="component-panel" data-component-tab="storage">Хранилище</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="component-panel" data-component-tab="performance">Производительность</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="component-panel" data-component-tab="ai">AI-READY</button>
+          </div>
+          <div class="code-window" aria-label="storage-schema.sql">
+            <div class="code-titlebar"><span class="traffic"><i></i><i></i><i></i></span><span id="component-window-title">storage-schema.sql</span></div>
+            <code id="component-code">
+              <span class="comment">-- Создание Iceberg таблицы</span>
+              <span><b>CREATE TABLE</b> lakehouse.events (</span>
+              <span>&nbsp;&nbsp;&nbsp;&nbsp;event_id&nbsp;&nbsp;<em>BIGINT</em>,</span>
+              <span>&nbsp;&nbsp;&nbsp;&nbsp;user_id&nbsp;&nbsp;&nbsp;<em>VARCHAR(64)</em>,</span>
+              <span>&nbsp;&nbsp;&nbsp;&nbsp;payload&nbsp;&nbsp;&nbsp;<em>JSON</em>,</span>
+              <span>&nbsp;&nbsp;&nbsp;&nbsp;ts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>TIMESTAMP</em></span>
+              <span>) <b>USING</b> iceberg</span>
+              <span><b>PARTITIONED BY</b> (days(ts));</span>
+            </code>
+            <div class="code-status" id="component-status">✓ Таблица создана · 0.09с</div>
+          </div>
+          <div class="storage-copy">
+            <h3><i id="component-number">01</i><span id="component-heading">Единое хранилище для всех типов данных</span></h3>
+            <p id="component-description">Структурированные, полуструктурированные и неструктурированные данные хранятся вместе — без копирования и дублирования. Форматы Parquet, ORC, CSV, JSON.</p>
+            <ul id="component-list"><li>Метакаталог Lakekeeper на базе Apache Iceberg (REST catalog)</li><li>S3-совместимое и HDFS хранилище</li><li>ACID-транзакции и оптимизация запросов поверх Data Lake</li></ul>
+          </div>
+        </div>
+        <script>
+          (() => {
+            const componentContent = {
+              storage: {
+                file: "storage-schema.sql",
+                number: "01",
+                heading: "Единое хранилище для всех типов данных",
+                description: "Структурированные, полуструктурированные и неструктурированные данные хранятся вместе — без копирования и дублирования. Форматы Parquet, ORC, CSV, JSON.",
+                list: ["Метакаталог Lakekeeper на базе Apache Iceberg (REST catalog)", "S3-совместимое и HDFS хранилище", "ACID-транзакции и оптимизация запросов поверх Data Lake"],
+                code: '<span class="comment">-- Создание Iceberg таблицы</span><span><b>CREATE TABLE</b> lakehouse.events (</span><span>&nbsp;&nbsp;&nbsp;&nbsp;event_id&nbsp;&nbsp;<em>BIGINT</em>,</span><span>&nbsp;&nbsp;&nbsp;&nbsp;user_id&nbsp;&nbsp;&nbsp;<em>VARCHAR(64)</em>,</span><span>&nbsp;&nbsp;&nbsp;&nbsp;payload&nbsp;&nbsp;&nbsp;<em>JSON</em>,</span><span>&nbsp;&nbsp;&nbsp;&nbsp;ts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>TIMESTAMP</em></span><span>) <b>USING</b> iceberg</span><span><b>PARTITIONED BY</b> (days(ts));</span>',
+                status: "✓ Таблица создана · 0.09с"
+              },
+              performance: {
+                file: "query-profile.log",
+                number: "02",
+                heading: "Субсекундные запросы к миллиардам строк",
+                description: "Движок StarRocks с векторизированным выполнением и адаптивным cost-based оптимизатором.",
+                list: ["Векторизированное выполнение запросов", "Cost-based query optimizer", "Материализованные представления"],
+                code: '<span class="comment">-- Профиль выполнения</span><span>Plan Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong class="code-value">Vectorized CBO</strong></span><span>Rows scanned&nbsp;&nbsp;&nbsp;<strong class="code-value">2,418,592,000</strong></span><span>Rows returned&nbsp;&nbsp;<strong class="code-value">20</strong></span><span>Execution&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong class="code-value">0.38с</strong></span><span>Cache hits&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong class="code-value">94.7%</strong></span>',
+                status: "# Ускорение vs PostgreSQL: 28×"
+              },
+              ai: {
+                file: "storage-schema.sql",
+                number: "03",
+                heading: "Единая платформа для аналитики и AI/ML",
+                description: "Данные не нужно готовить и копировать в отдельные системы — аналитика и ИИ работают в одном контуре. Поддержка цифровых двойников и LLM.",
+                list: ["Поддержка LLM: GigaChat, Qwen, DeepSeek, ChatGPT", "Материализованные представления: синхронные и асинхронные", "Нативная интеграция с MLflow и Spark MLlib"],
+                code: '<span><b>from</b> selena <b>import</b> LakehouseAI</span><span>ai = LakehouseAI(llm=<em>"gigachat"</em>)</span><span class="comment"># Запрос на естественном языке</span><span>result = ai.query(</span><span>&nbsp;&nbsp;&nbsp;&nbsp;<em>"Покажи топ-10 клиентов по<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;выручке за последний квартал"</em></span><span>)</span><span>Model&nbsp; <strong class="code-value">GigaChat · Qwen · DeepSeek</strong></span>',
+                status: "✓ SQL сгенерирован · 0.8с"
+              }
+            };
+
+            const tabs = [...document.querySelectorAll("[data-component-tab]")];
+            const windowTitle = document.querySelector("#component-window-title");
+            const code = document.querySelector("#component-code");
+            const status = document.querySelector("#component-status");
+            const number = document.querySelector("#component-number");
+            const heading = document.querySelector("#component-heading");
+            const description = document.querySelector("#component-description");
+            const list = document.querySelector("#component-list");
+            const componentPanel = document.querySelector("#component-panel");
+
+            const renderComponent = (key) => {
+              const content = componentContent[key];
+              windowTitle.textContent = content.file;
+              code.innerHTML = content.code;
+              status.textContent = content.status;
+              number.textContent = content.number;
+              heading.textContent = content.heading;
+              description.textContent = content.description;
+              list.replaceChildren(...content.list.map((item) => {
+                const li = document.createElement("li");
+                li.textContent = item;
+                return li;
+              }));
+              componentPanel.classList.remove("content-enter");
+              void componentPanel.offsetWidth;
+              componentPanel.classList.add("content-enter");
+            };
+
+            tabs.forEach((tab) => tab.addEventListener("click", () => {
+              tabs.forEach((item) => {
+                const selected = item === tab;
+                item.classList.toggle("active", selected);
+                item.setAttribute("aria-selected", String(selected));
+              });
+              renderComponent(tab.dataset.componentTab);
+            }));
+          })();
+        </script>
+        <div class="centered block-title"><p class="eyebrow">// 03 · Возможности</p><h2>Корпоративные возможности движка —<br>встроены в <mark class="mark-dark">платформу</mark></h2><p class="lead">Функции промышленного класса: катастрофоустойчивость, тонкая безопасность, оптимизация производительности. Всё готово к production-нагрузке и работает без дополнительных модулей 💻</p></div>
+        <div class="card-grid four compact">
+          <article class="card"><h3><i>01</i> Column Masking & Row Access</h3><p>Маскирование отдельных колонок и фильтрация строк по ролям пользователя через Apache Ranger</p></article>
+          <article class="card"><h3><i>02</i> Multi-Warehouse</h3><p>Физическая изоляция compute-ресурсов: отдельные warehouse под ETL, дашборды и ad-hoc аналитику</p></article>
+          <article class="card"><h3><i>03</i> Transparent Data Encryption</h3><p>Прозрачное шифрование данных на диске через HashiCorp Vault или облачные KMS-сервисы</p></article>
+          <article class="card"><h3>Failover Group (DR)</h3><p>Кросс-кластерная асинхронная репликация Primary → Standby с RPO в 15 минут и быстрым переключением</p></article>
+          <article class="card"><h3><i>05</i> Runtime Disk Management</h3><p>Вывод и замена дисков в compute-нодах без downtime кластера — поштучно, на лету</p></article>
+          <article class="card"><h3><i>06</i> Auto-MV Recommendation</h3><p>Автоматический анализ workload и рекомендации по материализованным представлениям на базе статистики запросов</p></article>
+          <article class="card"><h3><i>07</i> Cache Multi-Replica</h3><p>Репликация локального кеша между compute-нодами в shared-data режиме — для строгого p99 SLA под пиковой нагрузкой</p></article>
+          <article class="card"><h3><i>08</i> Password Policy</h3><p>Корпоративные политики паролей: длина, сложность, срок действия, автоблокировка после неудачных попыток</p></article>
+          <article class="card span-2"><h3><i>09</i> Unity Catalog Metastore</h3><p>Интеграция с Databricks Unity Catalog и Delta Lake поверх существующего озера данных — без миграции</p></article>
+          <article class="card span-2"><h3><i>10</i> Ranger + Kerberos (SPNEGO)</h3><p>Корпоративная авторизация через Apache Ranger с Kerberos SPNEGO — готовая связка для Hadoop-сред</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section assistant">
+      <div class="wrap centered">
+        <p class="eyebrow">// AI-помощник</p>
+        <h2><mark class="mark-white">AI-помощник</mark> аналитика</h2>
+        <p class="lead">Вопрос на русском → SQL → график. Без знания схемы данных и диалекта</p>
+        <div class="rail assistant-carousel" id="assistant-carousel">
+          <article class="card"><h3><svg class="card-title-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M17.5 9.688a7.188 7.188 0 0 1-7.188 7.187H4.375a1.25 1.25 0 0 1-1.25-1.25V9.688a7.188 7.188 0 1 1 14.375 0Z"/><path d="M6.25 9.688h.01M10 9.688h.01M13.75 9.688h.01"/></svg>Чат на естественном языке</h3><p>Спрашиваешь на русском — получаешь SQL, таблицу и объяснение результата</p><small>«покажи скважины с падением дебита за месяц»</small></article>
+          <article class="card"><h3><svg class="card-title-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.438 10.625h4.374v5.625H3.438zM7.813 6.875h4.374v9.375H7.813zM12.188 3.125h4.374V16.25H12.188zM2.188 16.25h15.624"/></svg>Автоотрисовка графиков</h3><p>LLM сама подбирает тип визуализации: bar, line, scatter, pie — в зависимости от структуры ответа</p><small>ответ → таблица → график за 3 секунды</small></article>
+          <article class="card"><h3><svg class="card-title-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M6.25 3.125h7.5M6.25 1.875v2.5M10 1.875v2.5M13.75 1.875v2.5M3.75 3.125h12.5V17.5H3.75zM7.5 10h5M7.5 12.5h5"/></svg>Блокнот отчётов</h3><p>Querybook + AI: SQL, графики и Python в одном редакторе. Версионирование и совместная работа</p><small>для аналитика, который пишет SQL сам</small></article>
+          <article class="card"><h3><svg class="card-title-icon" viewBox="0 0 20 20" aria-hidden="true"><ellipse cx="10" cy="5" rx="6.875" ry="3.125"/><path d="M3.125 5v5c0 1.725 3.078 3.125 6.875 3.125s6.875-1.4 6.875-3.125V5M3.125 10v5c0 1.725 3.078 3.125 6.875 3.125s6.875-1.4 6.875-3.125v-5"/></svg>Понимает метаданные</h3><p>Через MCP: каталоги, таблицы, статистика, query profile. Контекст живёт между вопросами диалога</p><small>MCP · каталог · query profile · history</small></article>
+          <article class="card"><h3><svg class="card-title-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2.5 16.875 5v5c0 4.375-2.94 6.787-6.875 7.5-3.935-.713-6.875-3.125-6.875-7.5V5L10 2.5Z"/></svg>Фильтр перед LLM</h3><p>Чувствительные данные не уходят во внешний LLM. Правила маскировки и детекция PII прямо в платформе</p><small>Для контура с персональными данными</small></article>
+          <article class="card"><h3><svg class="card-title-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16.7 7.5a5.625 5.625 0 0 1-7.075 7.075L5 19.2 2.5 16.7l4.625-4.625A5.625 5.625 0 0 1 14.2 5l-3.575 3.575.8.8L15 5.8A5.6 5.6 0 0 1 16.7 7.5Z"/></svg>LLM на выбор</h3><p>OpenAI, GigaChat, Qwen, DeepSeek — облачные и локальные модели. Переключение без данных</p><small>Enterprise → Локальный Qwen или GigaChat</small></article>
+        </div>
+        <div class="carousel-arrows assistant-arrows" aria-label="Управление каруселью AI-помощника">
+          <button type="button" data-assistant-prev aria-label="Предыдущие карточки">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16.875 10H3.125M8.75 4.375 3.125 10l5.625 5.625"/></svg>
+          </button>
+          <button type="button" data-assistant-next aria-label="Следующие карточки">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3.125 10h13.75M11.25 4.375 16.875 10l-5.625 5.625"/></svg>
+          </button>
+        </div>
+      </div>
+      <script>
+        (() => {
+          const carousel = document.querySelector("#assistant-carousel");
+          const prev = document.querySelector("[data-assistant-prev]");
+          const next = document.querySelector("[data-assistant-next]");
+          const step = () => carousel.querySelector(".card").getBoundingClientRect().width + 16;
+          const update = () => {
+            prev.disabled = carousel.scrollLeft <= 1;
+            next.disabled = carousel.scrollLeft >= carousel.scrollWidth - carousel.clientWidth - 1;
+          };
+
+          prev.addEventListener("click", () => carousel.scrollBy({ left: -step(), behavior: "smooth" }));
+          next.addEventListener("click", () => carousel.scrollBy({ left: step(), behavior: "smooth" }));
+          carousel.addEventListener("scroll", update, { passive: true });
+          window.addEventListener("resize", update);
+          update();
+        })();
+      </script>
+    </section>
+
+    <section class="section onboarding">
+      <div class="wrap split">
+        <div><p class="eyebrow">// 04 · Внедрение</p><h2>Как начать работу с <mark class="mark-lime">Selena</mark></h2><p class="lead">Четыре сценария интеграции в IT-ландшафт вашей компании — без слома текущей инфраструктуры 💡</p></div>
+        <div class="steps">
+          <article><h3><i>01</i> Нет DWH → строим с нуля</h3><b>Новая установка</b><p>Если у вас ещё нет хранилища данных — Selena строит единую, масштабируемую систему для аналитики, AI/ML и отчётности с нуля. Без legacy-ограничений.</p></article>
+          <article><h3><i>02</i> Есть DWH → расширяем возможности</h3><b>Новые аналитические сценарии</b><p>Текущий DWH остаётся нетронутым. Selena подключается для реализации новых кейсов: big data аналитика, машинное обучение, потоковая обработка.</p></article>
+          <article><h3><i>03</i> Устаревший DWH / Datalake → мигрируем</h3><b>Миграция с legacy систем</b><p>Переводим аналитическую инфраструктуру на современную Lakehouse-платформу. Бизнес-логика и данные сохраняются, стоимость и сложность снижаются.</p></article>
+          <article><h3><i>04</i> Несколько хранилищ → единая платформа</h3><b>Консолидация Data Platform</b><p>Несколько разрозненных хранилищ, озёр и BI-систем объединяются в централизованную Lakehouse-платформу. Единое управление данными и качеством.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section deploy">
+      <div class="wrap centered">
+        <p class="eyebrow">// 05 · Развёртывание</p>
+        <h2><mark class="mark-dark">Варианты</mark> установки</h2>
+        <p class="lead">Selena разворачивается в любой инфраструктуре — выберите подходящий способ</p>
+        <div class="card-grid three">
+          <article class="card"><small>Рекомендуется ✅</small><h3>◇ &nbsp;Kubernetes / Helm</h3><p>Готовые Helm-чарты для развёртывания в любом K8s-кластере. Поддержка GitOps, автомасштабирование, rolling-updates без даунтайма</p><div class="tags"><span>Helm Install Selena</span><span>GitOps</span><span>Autoscaling</span></div></article>
+          <article class="card"><small class="blue">Быстрый старт 🚀</small><h3>▣ &nbsp;Контейнеры</h3><p>Docker / Podman — разворачивается за минуты. Идеально для пилотов, dev-окружений и быстрого POC без настройки кластера</p><div class="tags"><span>Docker compose up</span><span>Podman</span><span>POC / Dev</span></div></article>
+          <article class="card"><small class="white">Продвинутый 💼</small><h3>▤ &nbsp;Bare Metal / ВМ</h3><p>Установка на физические серверы или виртуальные машины. Требует ручной настройки окружения, зато даёт полный контроль над ресурсами и конфигурацией</p><div class="tags"><span>RHEL / Astra Linux</span><span>Ansible</span><span>Full control</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compliance">
+      <div class="wrap">
+        <p class="eyebrow">// 06 · Соответствие</p>
+        <h2>Соответствует <mark class="mark-lime">требованиям</mark> российского регулирования</h2>
+        <p class="lead">Selena включена в реестр отечественного ПО Минцифры России и полностью соответствует требованиям импортозамещения для корпоративных заказчиков</p>
+        <div class="card-grid three compact">
+          <article class="card"><h3>✓ &nbsp;Реестр Минцифры № 27176</h3><p>Включена в реестр российского ПО с марта 2025</p></article>
+          <article class="card"><h3>✓ &nbsp;Документация на русском</h3><p>Полная техническая документация и API Reference</p></article>
+          <article class="card"><h3>✓ &nbsp;Проверка на закладки</h3><p>Сертификация и проверки безопасности кода</p></article>
+          <article class="card"><h3>✓ &nbsp;Единое окно 24×7</h3><p>Русскоязычная поддержка, SLA, эскалация инцидентов</p></article>
+          <article class="card"><h3>✓ &nbsp;Российские ОС</h3><p>Astra Linux, RedOS, RHEL, SberLinux, Alt Linux</p></article>
+          <article class="card"><h3>✓ &nbsp;Обучение и аудит</h3><p>Пусконаладка, обучение, технадзор, аудит платформы</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section clients">
+      <div class="wrap centered">
+        <p class="eyebrow">// 07 · Ядро StarRocks</p>
+        <h2>Ядро <mark class="mark-dark">Selena</mark> выбирают глобальные лидеры</h2>
+        <p class="lead">В основе платформы — коммерческое ядро StarRocks Enterprise. Тот же движок питает аналитику<br> в крупнейших мировых компаниях 🌐</p>
+      </div>
+      <div class="logo-rail">
+        <span><img src="assets/logos/54-6212.svg" alt="Kaspi"><small>Финтех · Казахстан</small></span>
+        <span><img src="assets/logos/54-6218.svg" alt="Lenovo"><small>Технологии · Мировой</small></span>
+        <span><img src="assets/logos/54-6225.svg" alt="Midea"><small>Бытовая техника</small></span>
+        <span><img src="assets/logos/54-6231.svg" alt="Trip.com"><small>Тревел · Маркетплейс</small></span>
+        <span><img src="assets/logos/54-6244.svg" alt="TCL"><small>Электроника · Китай</small></span>
+        <span><img src="assets/logos/54-6254.svg" alt="Geely"><small>Автопром · Китай</small></span>
+        <span><img src="assets/logos/54-6266.svg" alt="Tencent Games"><small>Электроника · Китай</small></span>
+        <span><img src="assets/logos/54-6289.svg" alt="Bank of Hangzhou"><small>Финансы · Банкинг</small></span>
+      </div>
+    </section>
+
+    <section class="section support" id="demo">
+      <div class="wrap">
+        <p class="eyebrow">// 08 · Поддержка</p>
+        <h2>Поддержка и профессиональные <mark class="mark-white">услуги</mark></h2>
+        <div class="card-grid three service-cards">
+          <article class="card"><small>Техническая поддержка</small><h3>⚙️ Единое окно 24×7</h3><p>Русскоязычная служба поддержки с гарантированным SLA. Инциденты решаются без языковых барьеров и задержек перевода</p><ul><li>✓ SLA 24×7 на русском языке</li><li>✓ Персональный технический менеджер</li><li>✓ Эскалация и приоритетная обработка</li><li>✓ Проактивный мониторинг</li></ul></article>
+          <article class="card"><small>Профессиональные услуги</small><h3>🔑 Внедрение под ключ</h3><p>Команда сертифицированных архитекторов DIS Group проектирует, внедряет и переносит данные — от POC до продуктивa</p><ul><li>✓ Архитектурный консалтинг</li><li>✓ Пусконаладка и конфигурация</li><li>✓ Миграция данных и ETL-пайплайны</li><li>✓ POC-проект за 2 недели</li></ul></article>
+          <article class="card"><small>Обучение и аудит</small><h3>📚 Знания вашей команде</h3><p>Очное и дистанционное обучение администраторов и разработчиков. Аудит производительности и технадзор</p><ul><li>✓ Обучение администраторов платформы</li><li>✓ Курсы для Data Engineers</li><li>✓ Аудит и оптимизация запросов</li><li>✓ Технадзор за эксплуатацией</li></ul></article>
+        </div>
+        <div class="demo-grid">
+          <div><p class="eyebrow">// Начните сегодня</p><h2>Готовы <mark class="mark-lime">начать?</mark></h2><p class="lead">Персональная демонстрация с вашими данными<br>и консультация с нашими архитекторами</p><div class="tags demo-labels"><span>Демо с вашими данными 📋</span><span>POC-проект за 2 недели ⏳</span><span>Включён в реестр российского ПО ✅</span><span>Поддержка DIS Group на русском 🇷🇺</span><span>On-premise, облако или гибридно 🤝</span></div></div>
+          <form>
+            <label>Имя*<input type="text" placeholder="Введите имя"></label>
+            <label>Должность*<input type="text" placeholder="Введите должность"></label>
+            <label class="wide">Email*<input type="email" placeholder="Введите email"></label>
+            <label class="wide">Компания*<input type="text" placeholder="Введите название компании"></label>
+            <label class="wide">Объем данных*<select><option>Выберите объем данных</option></select></label>
+            <button class="btn btn-white" type="submit">Запросить демо</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div><a class="logo" href="#top"><img src="assets/logos/I54-6460-62-3447.svg" alt="Selena"></a><p>Корпоративная платформа Data Lakehouse<br>для аналитики, BI и AI</p><span class="registry"><i class="registry-dot"></i>Реестр российского ПО · № 27176</span></div>
+      <div><b>Продукт</b><a id="docs" href="#">Документация</a><a href="#architecture">Архитектура</a><a href="#">Changelog</a><a href="#">Roadmap</a></div>
+      <div><b>Компания</b><a id="company" href="#">О нас</a><a id="blog" href="#">Блог</a><a href="#">Карьера</a><a href="#">Контакты</a></div>
+      <div><b>Поддержка</b><a href="#">База знаний</a><a href="#">Статус системы</a><a id="community" href="#">Telegram</a><a href="#">Конфиденциальность</a></div>
+    </div>
+    <div class="wrap copyright"><span>© 2026 Selena Data Technologies</span><span>Произведено в России</span></div>
+  </footer>
+  <script>
+    (() => {
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const reveal = (element, variant = "up", delay = 0) => {
+        element.classList.add("reveal", `reveal-${variant}`);
+        element.style.setProperty("--reveal-delay", `${delay}ms`);
+      };
+
+      document.querySelectorAll(".section").forEach((section) => {
+        const wrap = section.querySelector(":scope > .wrap");
+        if (!wrap) return;
+        [...wrap.children]
+          .filter((element) => element.matches(".eyebrow, h1, h2, .lead"))
+          .forEach((element, index) => reveal(element, "up", index * 90));
+      });
+
+      document.querySelectorAll(".hero-content > *").forEach((element, index) => reveal(element, "up", 80 + index * 90));
+
+      document.querySelectorAll(".card-grid, .rail, .steps, .logo-rail").forEach((group) => {
+        if (group.matches(".tools-carousel, .assistant-carousel")) return;
+        if (group.closest(".compliance")) {
+          reveal(group, "glass", 0);
+          return;
+        }
+        [...group.children].forEach((element, index) => {
+          reveal(element, "glass", Math.min(index * 75, 450));
+        });
+      });
+
+      document.querySelectorAll(".pills").forEach((element) => reveal(element, "up", 180));
+      document.querySelectorAll(".tabs").forEach((element) => reveal(element, "up", 0));
+      document.querySelectorAll(".arch-layer, .arch-footer").forEach((element, index) => reveal(element, "up", index * 95));
+      document.querySelectorAll(".feature-intro > .code-window, .feature-intro > .storage-copy, .demo-grid > *, form").forEach((element, index) => reveal(element, index % 2 ? "side" : "glass", index * 100));
+      document.querySelectorAll(".block-title > *, .demo-grid > div:first-child > *, .split > div:first-child > *").forEach((element, index) => reveal(element, "up", (index % 4) * 80));
+      document.querySelectorAll(".dash-chart").forEach((element) => element.classList.add("line-draw"));
+
+      if (reducedMotion || !("IntersectionObserver" in window)) {
+        document.querySelectorAll(".reveal, .line-draw").forEach((element) => element.classList.add("is-visible"));
+        return;
+      }
+
+      document.documentElement.classList.add("motion-enabled");
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+
+      document.querySelectorAll(".reveal, .line-draw").forEach((element) => observer.observe(element));
+    })();
+  </script>
+</body>
+</html>
